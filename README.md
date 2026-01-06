@@ -170,8 +170,8 @@ private static final String PASSWORD = ""; // Tvoj MySQL password
 
 ## Pokretanje Aplikacije
 Prije pokretanja dodati bazu podataka
--` mvn clean install`
--` mvn javafx:run `
+- `mvn clean install`
+- `mvn javafx:run`
 
 ## Struktura Projekta
 
