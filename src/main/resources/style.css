@@ -1,0 +1,348 @@
+/* Escape Room Management System - Modern CSS Styling */
+
+/* Root styling */
+.root {
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* Login container */
+.login-container {
+    -fx-background-color: linear-gradient(to bottom right, #667eea 0%, #764ba2 100%);
+}
+
+.login-title {
+    -fx-text-fill: white;
+}
+
+.login-subtitle {
+    -fx-text-fill: #f0f0f0;
+}
+
+.login-form {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 15, 0, 0, 5);
+}
+
+.info-label {
+    -fx-text-fill: #f0f0f0;
+    -fx-font-style: italic;
+}
+
+/* Dashboard styling */
+.dashboard-root {
+    -fx-background-color: #f5f7fa;
+}
+
+.welcome-label {
+    -fx-text-fill: #2d3748;
+}
+
+/* Statistics cards */
+.stat-card {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+}
+
+.stat-card:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 15, 0, 0, 5);
+    -fx-cursor: hand;
+}
+
+.stat-title {
+    -fx-text-fill: #718096;
+}
+
+.stat-value {
+    -fx-text-fill: #2d3748;
+}
+
+/* Leaderboard box */
+.leaderboard-box {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 3);
+    -fx-padding: 15px;
+}
+
+/* Management root */
+.management-root {
+    -fx-background-color: #f5f7fa;
+}
+
+/* Header box */
+.header-box {
+    -fx-background-color: white;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 0 0 2px 0;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #4299e1;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+.button:hover {
+    -fx-background-color: #3182ce;
+}
+
+.button:pressed {
+    -fx-background-color: #2c5282;
+}
+
+.primary-button {
+    -fx-background-color: #48bb78;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-font-weight: bold;
+}
+
+.primary-button:hover {
+    -fx-background-color: #38a169;
+}
+
+.danger-button {
+    -fx-background-color: #f56565;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-font-weight: bold;
+}
+
+.danger-button:hover {
+    -fx-background-color: #e53e3e;
+}
+
+.back-button {
+    -fx-background-color: #e2e8f0;
+    -fx-text-fill: #2d3748;
+}
+
+.back-button:hover {
+    -fx-background-color: #cbd5e0;
+}
+
+.action-button {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.action-button:hover {
+    -fx-background-color: #5a67d8;
+}
+
+/* Text fields */
+.text-field, .text-area {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-color: #cbd5e0;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+    -fx-padding: 8px;
+    -fx-text-fill: #2d3748;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #4299e1;
+    -fx-border-width: 2px;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-color: #cbd5e0;
+    -fx-border-radius: 5px;
+}
+
+/* TableView */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 5px;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 5px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #edf2f7;
+}
+
+.table-view .column-header {
+    -fx-background-color: #edf2f7;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2d3748;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f7fafc;
+}
+
+.table-row-cell:even {
+    -fx-background-color: white;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #bee3f8;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #e6fffa;
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: #2d3748;
+}
+
+.error-label {
+    -fx-text-fill: #f56565;
+    -fx-font-weight: bold;
+}
+
+/* Menu Bar */
+.menu-bar {
+    -fx-background-color: #2d3748;
+}
+
+.menu-bar .label {
+    -fx-text-fill: white;
+}
+
+.menu-bar .menu:hover {
+    -fx-background-color: #4a5568;
+}
+
+.menu-item {
+    -fx-background-color: white;
+}
+
+.menu-item:hover {
+    -fx-background-color: #edf2f7;
+}
+
+/* Tab Pane */
+.tab-pane {
+    -fx-background-color: white;
+}
+
+.tab-pane .tab-header-background {
+    -fx-background-color: #edf2f7;
+}
+
+.tab {
+    -fx-background-color: #e2e8f0;
+    -fx-background-radius: 5px 5px 0 0;
+    -fx-padding: 10px 20px;
+}
+
+.tab:selected {
+    -fx-background-color: white;
+    -fx-font-weight: bold;
+}
+
+.tab .tab-label {
+    -fx-text-fill: #2d3748;
+}
+
+/* Dialog */
+.dialog-pane {
+    -fx-background-color: white;
+}
+
+.dialog-pane .button-bar .button {
+    -fx-background-color: #4299e1;
+    -fx-text-fill: white;
+}
+
+/* ScrollBar */
+.scroll-bar {
+    -fx-background-color: #f7fafc;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #cbd5e0;
+    -fx-background-radius: 5px;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: #a0aec0;
+}
+
+/* CheckBox */
+.check-box {
+    -fx-text-fill: #2d3748;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e0;
+    -fx-border-radius: 3px;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #48bb78;
+}
+
+/* Spinner */
+.spinner {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e0;
+    -fx-border-radius: 5px;
+}
+
+/* DatePicker */
+.date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e0;
+    -fx-border-radius: 5px;
+}
+/* ========================================
+   TABLE SELECTION - Better Visibility
+   ======================================== */
+
+/* Selected row in table - dark blue background */
+.table-view: focused .table-row-cell:selected {
+    -fx-background-color: #2c5282;  /* Tamno plava */
+    -fx-text-fill: white;
+}
+
+/* Selected row when table is not focused - lighter blue */
+.table-view . table-row-cell:selected {
+    -fx-background-color: #4299e1;  /* Svetlo plava */
+    -fx-text-fill: white;
+}
+
+/* Selected cell text color */
+.table-view:focused .table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+}
+
+. table-view .table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+}
+
+/* Hover effect on rows */
+.table-row-cell:hover {
+    -fx-background-color: #e6f2ff;  /* Svetlo plava na hover */
+    -fx-cursor: hand;
+}
+
+/* Selected + hover combination */
+.table-row-cell:selected:hover {
+    -fx-background-color: #1e3a8a;  /* Još tamnija plava */
+}
