@@ -2,6 +2,18 @@
 
 Sistem za upravljanje Escape Room-om razvijen u Java-i sa JavaFX korisničkim interfejsom i MySQL bazom podataka. 
 
+
+## Pokretanje Aplikacije
+Prije pokretanja dodati bazu podataka koja se nalazi u `src/main/resources/database_schema.sql`
+- `mvn clean install`
+- `mvn javafx:run`
+
+## Radili
+- Eldar Alić
+- Eniz Dajić
+- Feđa Čoloman
+
+
 ## Sadržaj
 
 - [O Projektu](#o-projektu)
@@ -168,10 +180,6 @@ private static final String USER = "root";  // Tvoj MySQL username
 private static final String PASSWORD = ""; // Tvoj MySQL password
 ```
 
-## Pokretanje Aplikacije
-Prije pokretanja dodati bazu podataka
-- `mvn clean install`
-- `mvn javafx:run`
 
 ## Struktura Projekta
 
