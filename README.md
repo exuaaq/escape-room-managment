@@ -5,8 +5,7 @@ Sistem za upravljanje Escape Room-om razvijen u Java-i sa JavaFX korisničkim in
 
 ## Pokretanje Aplikacije
 Prije pokretanja dodati bazu podataka koja se nalazi u `src/main/resources/database_schema.sql`
-- `mvn clean install`
-- `mvn javafx:run`
+Pokrenuti Main
 
 ## Radili
 - Eldar Alić
