@@ -115,7 +115,7 @@ public class LoginView {
         DashboardView dashboardView = new DashboardView(primaryStage, user);
         Scene dashboardScene = dashboardView.createScene();
         primaryStage.setScene(dashboardScene);
-        primaryStage.setMaximized(true);
+        //primaryStage.setMaximized(true);
     }
     
     private void showRegistrationDialog() {

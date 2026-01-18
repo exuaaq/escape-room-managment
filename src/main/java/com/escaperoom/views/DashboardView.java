@@ -234,42 +234,37 @@ public class DashboardView {
     }
     
     private void showRoomManagement() {
-        boolean wasFullScreen = primaryStage.isFullScreen();
         RoomManagementView roomView = new RoomManagementView(primaryStage, currentUser);
         Scene scene = roomView.createScene();
         primaryStage.setScene(scene);
-        primaryStage.setFullScreen(wasFullScreen);
+        //primaryStage.setMaximized(true);
     }
-    
+
     private void showBookingManagement() {
-        boolean wasFullScreen = primaryStage.isFullScreen();
         BookingManagementView bookingView = new BookingManagementView(primaryStage, currentUser);
         Scene scene = bookingView.createScene();
         primaryStage.setScene(scene);
-        primaryStage.setFullScreen(wasFullScreen);
+        //primaryStage.setMaximized(true);
     }
-    
+
     private void showPlayerManagement() {
-        boolean wasFullScreen = primaryStage.isFullScreen();
         PlayerManagementView playerView = new PlayerManagementView(primaryStage, currentUser);
         Scene scene = playerView.createScene();
         primaryStage.setScene(scene);
-        primaryStage.setFullScreen(wasFullScreen);
+        //primaryStage.setMaximized(true);
     }
-    
+
     private void showGameSessionView() {
-        boolean wasFullScreen = primaryStage.isFullScreen();
         GameSessionView sessionView = new GameSessionView(primaryStage, currentUser);
         Scene scene = sessionView.createScene();
         primaryStage.setScene(scene);
-        primaryStage.setFullScreen(wasFullScreen);
+        //primaryStage.setMaximized(true);
     }
-    
+
     private void showReports() {
-        boolean wasFullScreen = primaryStage.isFullScreen();
         ReportsView reportsView = new ReportsView(primaryStage, currentUser);
         Scene scene = reportsView.createScene();
         primaryStage.setScene(scene);
-        primaryStage.setFullScreen(wasFullScreen);
+        //primaryStage.setMaximized(true);
     }
 }
