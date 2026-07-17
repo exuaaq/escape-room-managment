@@ -1,300 +1,337 @@
 # Escape Room Management System
 
-Sistem za upravljanje Escape Room-om razvijen u Java-i sa JavaFX korisničkim interfejsom i MySQL bazom podataka. 
+An Escape Room Management System developed in Java featuring a JavaFX user interface and a MySQL database.
 
+## Contributors
 
-## Pokretanje Aplikacije
-- Prije pokretanja dodati bazu podataka koja se nalazi u `src/main/resources/database_schema.sql`
-- Pokrenuti Main
-
-## Radili
 - Eldar Alić
 - Eniz Dajić
 - Feđa Čoloman
 
+## Table of Contents
 
-## Sadržaj
+- [About the Project](#about-the-project)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Database Configuration](#database-configuration)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Security](#security)
+- [License](#license)
 
-- [O Projektu](#o-projektu)
-- [Funkcionalnosti](#funkcionalnosti)
-- [Tehnologije](#tehnologije)
-- [Preduslovi](#preduslovi)
-- [Instalacija](#instalacija)
-- [Konfiguracija Baze Podataka](#konfiguracija-baze-podataka)
-- [Pokretanje Aplikacije](#pokretanje-aplikacije)
-- [Struktura Projekta](#struktura-projekta)
-- [Upotreba](#upotreba)
-- [Sigurnost](#sigurnost)
+---
 
-## O Projektu
+## About the Project
 
-Escape Room Management System je desktop aplikacija koja omogućava kompletno upravljanje escape room poslovanjem.  Sistem omogućava praćenje soba, rezervacija, igrača, gaming sesija i finansijskih izvještaja. 
+The Escape Room Management System is a desktop application designed to streamline the complete management of an escape room business. The system enables seamless tracking of rooms, bookings, players, game sessions, and financial reporting.
 
-Projekat je razvijen kao timski rad i sadrži sve potrebne komponente: 
-- **Modeli objekata**:  User, Room, Player, Booking, GameSession (više od 3)
-- **Interfejsi**: DAO (Data Access Object) pattern
-- **Baza podataka**: MySQL sa JDBC konekcijom
-- **JavaFX GUI**: Login, Dashboard, CRUD forme, tabelarni prikazi
-- **CRUD operacije**: Create, Read, Update, Delete nad svim entitetima
-- **Izvoz podataka**:  Izvještaji sa mogućnošću eksporta u PDF format
+The project includes:
 
-## Funkcionalnosti
+- **Object Models**: User, Room, Player, Booking, and GameSession.
+- **DAO Pattern**: Separation of data access and business logic.
+- **Database Integration**: MySQL with JDBC.
+- **JavaFX GUI**: Login screen, dashboard, management forms, and reporting views.
+- **CRUD Operations**: Full Create, Read, Update, and Delete functionality.
+- **PDF Export**: Generate reports directly in PDF format.
 
-### Autentifikacija
-- Sigurna autentifikacija sa BCrypt hash-iranjem lozinki
-- Upravljanje korisničkim nalozima
+---
 
-### Upravljanje Sobama
-- Dodavanje, izmjena i brisanje escape room soba
-- Praćenje tema, težine, kapaciteta i cijene
-- Aktiviranje/deaktiviranje soba
-- Praćenje prosječnih ocjena
-- Tabelarni prikaz svih soba
+## Features
 
-### Upravljanje Rezervacijama (Bookings)
-- Kreiranje novih rezervacija
-- Filtriranje po statusu (PENDING, CONFIRMED, COMPLETED, CANCELLED)
-- Ažuriranje statusa rezervacija
-- Povezivanje rezervacija sa sobama i igračima
-- Tabelarni prikaz svih rezervacija
+### Authentication
 
-### Upravljanje Igračima
-- Registracija novih igrača
-- Izmjena podataka igrača
-- Praćenje statistika igrača: 
-  - Ukupan broj odigranih igara
-  - Broj pobjeda i poraza
-  - Prosječno vrijeme
-  - Ukupan broj korištenih savjeta
-- Tabelarni prikaz svih igrača
+- Secure login using BCrypt password hashing.
+- User role management and authorization.
 
-### Gaming Sesije
-- Kreiranje sesija sa ili bez rezervacije (walk-in klijenti)
-- Praćenje vremena trajanja igre
-- Broj korištenih savjeta
-- Ocjene i recenzije
-- Praćenje prihoda po sesiji
-- Tabelarni prikaz svih sesija
+### Room Management
+
+- Add, edit, and delete escape rooms.
+- Manage themes, difficulty levels, player capacities, and pricing.
+- Activate or deactivate rooms.
+- Track ratings and reviews.
+
+### Booking Management
+
+- Create and manage bookings.
+- Filter bookings by status:
+  - PENDING
+  - CONFIRMED
+  - COMPLETED
+  - CANCELLED
+- Update booking lifecycle status.
+- Associate bookings with rooms and players.
+
+### Player Management
+
+- Register and update player profiles.
+- Track:
+  - Total games played
+  - Wins and losses
+  - Average completion time
+  - Total hints used
+
+### Game Sessions
+
+- Start sessions from bookings or walk-in customers.
+- Track active game duration.
+- Record hints used, ratings, and reviews.
+- Calculate session revenue.
 
 ### Dashboard
-- Pregled statistika: 
-  - Ukupan broj soba
-  - Rezervacije za danas
-  - Mjesečni prihod
-  - Ukupan broj igrača
-- Top 5 igrača - leaderboard
-- Brze akcije za pristup modulima
 
-### Izvještaji i Izvoz
-- Izvještaj performansi soba
-- Izvještaj rezervacija (sa filterima)
-- **Izvoz u PDF format**
+- Total active rooms
+- Today's bookings
+- Monthly revenue
+- Total registered players
+- Top 5 players leaderboard
+- Quick navigation shortcuts
 
-## Tehnologije
+### Reports & Exporting
 
-- **Java 17+**
-- **JavaFX 17+** - Korisnički interfejs
-- **MySQL 8.0+** - Baza podataka
-- **BCrypt** - Hash-iranje lozinki
-- **JDBC** - Komunikacija sa bazom podataka
-- **DAO Pattern** - Arhitekturni pattern za pristup podacima
+- Room performance reports
+- Booking summaries
+- PDF export support
 
-## Preduslovi
+---
 
-Prije instalacije, potrebno je imati instalirano:
+## Technologies
 
-1. **Java Development Kit (JDK) 17 ili noviji**
-   - [Preuzmi JDK](https://www.oracle.com/java/technologies/downloads/)
-   
-2. **MySQL Server 8.0 ili noviji**
-   - [Preuzmi MySQL](https://dev.mysql.com/downloads/mysql/)
-   
-3. **JavaFX SDK** (ako nije uključen u JDK)
-   - [Preuzmi JavaFX](https://openjfx.io/)
+- Java 17+
+- JavaFX 17+
+- MySQL 8.0+
+- JDBC
+- BCrypt
+- DAO Pattern
 
-## Instalacija
+---
 
-### 1. Kloniraj Repozitorij
+## Prerequisites
+
+Before running the application, install:
+
+1. **Java Development Kit (JDK) 17+**
+   - https://www.oracle.com/java/technologies/downloads/
+
+2. **MySQL Server 8.0+**
+   - https://dev.mysql.com/downloads/mysql/
+
+3. **JavaFX SDK** (if required)
+   - https://openjfx.io/
+
+---
+
+## Installation
+
+### Clone the Repository
 
 ```bash
 git clone https://github.com/exuaaq/escape-room-managment.git
 cd escape-room-managment
 ```
 
-### 2. Preuzmi Potrebne Biblioteke
+### Add Required Dependencies
 
-Potrebne su sljedeće JAR biblioteke u `lib` folderu:
+Place the following libraries in the project's `lib/` directory (if not managed through Maven):
 
-- `mysql-connector-java-8.0.33.jar` - MySQL JDBC driver
-- `bcrypt-0.10.2.jar` - BCrypt biblioteka za hash-iranje
-- `javafx-*. jar` - JavaFX biblioteke (ako nisu u JDK-u)
+- `mysql-connector-java-8.0.33.jar`
+- `bcrypt-0.10.2.jar`
+- JavaFX runtime libraries
 
-## Konfiguracija Baze Podataka
+---
 
-### 1. Kreiraj Bazu Podataka
+## Database Configuration
 
-Pokreni MySQL i izvrši SQL skriptu:
+### 1. Import the Database Schema
+
+Run the schema file:
 
 ```bash
-mysql -u root -p < database_setup. sql
+mysql -u root -p < src/main/resources/database_schema.sql
 ```
 
-Ili ručno u MySQL klijentu: 
+Or execute inside a MySQL client:
 
 ```sql
-source /putanja/do/database_setup.sql
+SOURCE /absolute/path/to/src/main/resources/database_schema.sql;
 ```
 
-Ova skripta će:
-- Kreirati bazu podataka `escape_room_db`
-- Kreirati sve potrebne tabele
-- Dodati sample podatke (sobe, igrači, rezervacije, sesije)
-- **NAPOMENA**: Nema inicijalnog admin korisnika - potrebno je kreirati ručno
+This will:
 
-### 2. Kreiraj Prvog Korisnika
+- Create the `escape_room_db` database
+- Create all required tables
+- Insert sample data
 
-Možeš kreirati korisnika na dva načina: 
+---
 
-**Opcija A: Preko MySQL-a**
+### 2. Create an Admin User
 
 ```sql
 USE escape_room_db;
 
--- Lozinka:  admin123
-INSERT INTO users (username, password_hash, role, first_name, last_name, email) 
-VALUES ('admin', '$2a$10$xFJkXzR8h7.NvSL1P4f8.eG1YVwJ5l0K8oZ2pQ3mN9xC1wH5yL6Fy', 'ADMIN', 'Admin', 'User', 'admin@escaperoom.com');
+INSERT INTO users (
+    username,
+    password_hash,
+    role,
+    first_name,
+    last_name,
+    email
+)
+VALUES (
+    'admin',
+    '$2a$10$xFJkXzR8h7.NvSL1P4f8.eG1YVwJ5l0K8oZ2pQ3mN9xC1wH5yL6Fy',
+    'ADMIN',
+    'Admin',
+    'User',
+    'admin@escaperoom.com'
+);
 ```
 
-**Opcija B: Kreiraj vlastiti hash lozinke**
+**Default Credentials**
 
-Možeš koristiti online BCrypt generator ili napisati jednostavan Java program. 
+| Username | Password |
+|-----------|-----------|
+| admin | admin123 |
 
-### 3. Konfiguriši Database Connection
+---
 
-Uredi fajl `src/main/java/com/escaperoom/database/DatabaseConnection.java`:
+### 3. Configure Database Connection
+
+Open:
+
+```text
+src/main/java/com/escaperoom/database/DatabaseConnection.java
+```
+
+Update:
 
 ```java
-private static final String URL = "jdbc: mysql://localhost:3306/escape_room_db";
-private static final String USER = "root";  // Tvoj MySQL username
-private static final String PASSWORD = ""; // Tvoj MySQL password
+private static final String URL =
+    "jdbc:mysql://localhost:3306/escape_room_db";
+
+private static final String USER = "root";
+private static final String PASSWORD = "password";
 ```
 
+---
 
-## Struktura Projekta
+## Running the Application
 
+After configuring the database:
+
+1. Import the database schema.
+2. Configure database credentials.
+3. Run:
+
+```text
+Main.java
 ```
+
+---
+
+## Project Structure
+
+```text
 escape-room-managment/
 ├── src/
 │   └── main/
 │       ├── java/
 │       │   └── com/
 │       │       └── escaperoom/
-│       │           ├── dao/              # Data Access Objects
-│       │           │   ├── BookingDAO. java
-│       │           │   ├── GameSessionDAO.java
-│       │           │   ├── PlayerDAO.java
-│       │           │   ├── RoomDAO.java
-│       │           │   └── UserDAO.java
-│       │           ├── database/         # Database konfiguracija
-│       │           │   └── DatabaseConnection.java
-│       │           ├── interfaces/       # Interfejsi
-│       │           │   ├── Bookable.java
-│       │           │   └── Exportable.java
-│       │           ├── models/           # Model klase
-│       │           │   ├── Booking.java
-│       │           │   ├── BookingStatus.java
-│       │           │   ├── GameSession.java
-│       │           │   ├── Player.java
-│       │           │   ├── Room.java
-│       │           │   ├── User.java
-│       │           │   └── UserRole.java
-│       │           ├── utils/            # Pomoćne klase
-│       │           │   ├── AlertUtil.java
-│       │           │   └── PasswordHasher.java
-│       │           ├── views/            # UI Views
-│       │           │   ├── BookingManagementView.java
-│       │           │   ├── DashboardView.java
-│       │           │   ├── GameSessionView.java
-│       │           │   ├── LoginView.java
-│       │           │   ├── PlayerManagementView.java
-│       │           │   ├── ReportsView.java
-│       │           │   ├── RoomManagementView.java
-│       │           │   └── UserManagementView.java
-│       │           └── Main.java         # Main aplikacija
+│       │           ├── dao/
+│       │           ├── database/
+│       │           ├── interfaces/
+│       │           ├── models/
+│       │           ├── utils/
+│       │           ├── views/
+│       │           └── Main.java
 │       └── resources/
 │           ├── database_schema.sql
 │           ├── migration_booking_id_nullable.sql
-│           └── style.css               # CSS stilovi
-├── . gitignore
-├── pom.xml                              # Maven konfiguracija
+│           └── style.css
+├── .gitignore
+├── pom.xml
 ├── PROJECT_SUMMARY.md
 └── README.md
 ```
 
-## Upotreba
+---
+
+## Usage
 
 ### Login
 
-1. Pokreni aplikaciju
-2. Uloguj se sa kredencijalima:
-   - Username:  `admin`
-   - Password: `admin123` (ako si koristio default hash)
+Launch the application and log in using:
+
+```text
+Username: admin
+Password: admin123
+```
 
 ### Dashboard
 
-Nakon logina, vidjet ćeš dashboard sa:
-- Statistikama sistema
-- Top 5 igrača
-- Brzim akcijama za pristup modulima
+After login, the dashboard displays:
 
-### CRUD Operacije
+- System statistics
+- Revenue overview
+- Top players
+- Quick navigation options
 
-**Room Management (Upravljanje Sobama)**
-- **Create**: Dodaj novu sobu
-- **Read**: Pregledaj sve sobe u tabeli
-- **Update**: Izmijeni postojeću sobu
-- **Delete**: Obriši ili deaktiviraj sobu
+### Available Modules
 
-**Booking Management (Upravljanje Rezervacijama)**
-- **Create**: Kreiraj novu rezervaciju
-- **Read**: Pregledaj sve rezervacije u tabeli
-- **Update**:  Potvrdi, završi ili otkaži rezervacije
-- **Delete**:  Obriši rezervaciju
-- **Filter**: Filtriraj po statusu
+#### Room Management
 
-**Player Management (Upravljanje Igračima)**
-- **Create**: Dodaj novog igrača
-- **Read**: Pregledaj sve igrače u tabeli
-- **Update**: Izmijeni podatke igrača
-- **Delete**: Obriši igrača
+- Create rooms
+- Edit room information
+- Manage pricing and difficulty
+- Activate/deactivate rooms
 
-**Game Sessions (Gaming Sesije)**
-- **Create**: Kreiraj novu gaming sesiju
-- **Read**:  Pregledaj sve sesije u tabeli
-- **Update**: Izmijeni sesiju
-- **Filter**: Poveži sa rezervacijom ili kreiraj walk-in sesiju
+#### Booking Management
 
-**User Management (Upravljanje Korisnicima)**
-- **Create**: Kreiraj nove korisnike
-- **Read**: Pregledaj sve korisnike u tabeli
-- **Update**: Izmijeni postojeće korisnike
-- **Delete**: Obriši korisnike
+- Create bookings
+- Update booking status
+- Filter booking records
 
-### Izvještaji i PDF Izvoz
+#### Player Management
 
-**Reports (Izvještaji)**
-- Generiši izvještaje performansi soba
-- Izvještaj rezervacija sa filterima
-- **Izvezi izvještaje u PDF format**
+- Manage player profiles
+- View statistics and history
 
-## Sigurnost
+#### Game Sessions
 
-- **Lozinke**: Sve lozinke su hash-irane pomoću BCrypt algoritma sa saltom
-- **SQL Injection**:  Koriste se PreparedStatement-i za sve database upite
-- **Validacija**: Svi input podaci se validiraju prije obrade
+- Start and monitor sessions
+- Record reviews and ratings
+- Track revenue
 
+#### User Management
 
-## Licence
+- Manage system operators
+- Assign roles and permissions
 
-Ovaj projekat je razvijen u obrazovne svrhe. 
+#### Reports
 
+- Generate operational reports
+- Export reports to PDF
+
+---
+
+## Security
+
+### Password Protection
+
+Passwords are stored using BCrypt hashing.
+
+### SQL Injection Prevention
+
+All database operations use prepared statements.
+
+### Input Validation
+
+User input is validated before processing.
+
+---
+
+## License
+
+This project was developed as part of an academic team project and is intended for educational purposes only.
